@@ -18,7 +18,7 @@ These parts can be updated for new technologies (**New research topic**).
 
 To understand SLAM, one should know **EKF** (Extended Kalman Filter).
 
-### Extended Kalman Filter
+### How Extended Kalman Filter (EKF) is used in SLAM
 
 - Based off of Kalman Filter (non-linear version)
 - Heart of SLAM process
@@ -28,4 +28,6 @@ To understand SLAM, one should know **EKF** (Extended Kalman Filter).
 - when the odometry changes (due to the robot moving) the uncertainty ertaning to the robots new position is updated in the EKF using odometry update
 - landmarks are then extracted from the environment from the new position
 - the robot then **attempts** to associate these landmarks to observations of landmarks it previously has seen
-- ​
+- re-observed landmarks are then used to update the robots position in the EKF
+- landmarks which have not been proviously been seen are added to the EKF as new observations so they can be re-observed later
+
